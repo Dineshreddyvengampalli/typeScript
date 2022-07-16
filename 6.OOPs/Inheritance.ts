@@ -6,7 +6,6 @@ class animal{
     public weight : number;
     public colour : string;
     public name : string;
-
     // public setName(nme:string){
     //     this.name = nme;
     // }

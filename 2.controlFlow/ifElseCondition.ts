@@ -17,7 +17,7 @@ for(let i:number = 1;i<num;i++){
     }
 }
 if(sum == num){
-    console.log("Yes");
+    console.log('yes');
 }
 else{
     console.log("no");
