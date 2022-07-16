@@ -2,7 +2,6 @@
 
 
 // 1. Create a class called 'fan', assume your own data members, methods atleast 6 each and two private data members.
-
 class fan{
     // create the data members of the class
 
