@@ -1,14 +1,13 @@
-function add(var1) {
-    var varx = [];
-    for (var _i = 1; _i < arguments.length; _i++) {
-        varx[_i - 1] = arguments[_i];
-    }
-    var sum = 0;
-    for (var i = 0; i < varx.length; i++) {
-        sum = sum + varx[i];
-        sum = sum + var1;
-    }
-    console.log(sum);
+function add(a, b) {
+    console.log(a, b);
 }
-add(1, 2, 3, 4, 5);
-add(12, 1);
+add(1, 2);
+function array(para) {
+    var new_arr = [];
+    for (var i = 0; i < para.length; i++) {
+        new_arr.push(para[i]);
+    }
+    console.log(new_arr);
+}
+array([1, 2, 3, 4]);
+array(['hai', 'hello']);
