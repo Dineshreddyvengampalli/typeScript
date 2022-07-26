@@ -37,47 +37,44 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 exports.__esModule = true;
 var node_fetch_1 = require("node-fetch");
-// let getData = ()=>{
-//     fetch('http://jsonplaceholder.typicode.com/users').then((message)=>{
-//     return message.json().then((mes)=>{
-//         console.log(mes)
-//     })
-// })
-// }
-function getData() {
+var data = {
+    name: 'dinesh',
+    job: 'entreprenuer'
+};
+function postData() {
     return __awaiter(this, void 0, void 0, function () {
-        var response, err_1;
+        var response, data;
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0:
-                    _a.trys.push([0, 2, , 3]);
-                    return [4 /*yield*/, (0, node_fetch_1["default"])('https://www.nseindia.com/api/option-chain-indices?symbol=NIFTY')];
+                case 0: return [4 /*yield*/, (0, node_fetch_1["default"])('https://reqres.in/api/users', {
+                        method: 'POST',
+                        body: JSON.stringify(data),
+                        headers: {
+                            "Content-type": "application/json; charset=UTF-8"
+                        }
+                    })];
                 case 1:
                     response = _a.sent();
-                    return [2 /*return*/, response];
+                    return [4 /*yield*/, response.json()];
                 case 2:
-                    err_1 = _a.sent();
-                    console.log("this is from catch");
-                    console.log(err_1);
-                    return [3 /*break*/, 3];
-                case 3: return [2 /*return*/];
+                    data = _a.sent();
+                    return [2 /*return*/, data];
             }
         });
     });
 }
 function call() {
     return __awaiter(this, void 0, void 0, function () {
-        var result;
+        var res;
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0: return [4 /*yield*/, getData()];
+                case 0: return [4 /*yield*/, postData()];
                 case 1:
-                    result = _a.sent();
-                    console.log(result);
+                    res = _a.sent();
+                    console.log(res);
                     return [2 /*return*/];
             }
         });
     });
 }
 call();
-console.log('hai');

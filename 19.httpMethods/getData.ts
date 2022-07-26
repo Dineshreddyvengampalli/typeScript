@@ -10,9 +10,9 @@ import fetch from "node-fetch";
 
 async function getData(){
         try{
-            let response = await fetch('http://jsonplaceholder.typicode.com/users')
-            let data = await response.json()
-            return data
+            let response = await fetch('https://www.nseindia.com/api/option-chain-indices?symbol=NIFTY')
+
+            return response
         }
         catch(err){
             console.log("this is from catch")
@@ -30,3 +30,5 @@ async function call() {
 }
 
 call()
+
+console.log('hai')
