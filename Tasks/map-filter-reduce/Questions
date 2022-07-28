@@ -1,0 +1,6 @@
+Questions of the task map,filter,reduce
+
+1.Get all unique users based on their email id.
+2.Get all users with date of birth before 1990.
+3.Get all unique company names from the data.
+4.Get All users's ids who are using same 'apiKey'
