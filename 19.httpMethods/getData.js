@@ -46,21 +46,24 @@ var node_fetch_1 = require("node-fetch");
 // }
 function getData() {
     return __awaiter(this, void 0, void 0, function () {
-        var response, err_1;
+        var response, data, err_1;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
-                    _a.trys.push([0, 2, , 3]);
-                    return [4 /*yield*/, (0, node_fetch_1["default"])('https://www.nseindia.com/api/option-chain-indices?symbol=NIFTY')];
+                    _a.trys.push([0, 3, , 4]);
+                    return [4 /*yield*/, (0, node_fetch_1["default"])('https://reqres.in/api/users')];
                 case 1:
                     response = _a.sent();
-                    return [2 /*return*/, response];
+                    return [4 /*yield*/, response.json()];
                 case 2:
+                    data = _a.sent();
+                    return [2 /*return*/, data];
+                case 3:
                     err_1 = _a.sent();
                     console.log("this is from catch");
                     console.log(err_1);
-                    return [3 /*break*/, 3];
-                case 3: return [2 /*return*/];
+                    return [3 /*break*/, 4];
+                case 4: return [2 /*return*/];
             }
         });
     });

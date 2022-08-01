@@ -6,10 +6,10 @@ let square = (a:number)=>{
     return a**2
 }
 
+
 let result = array.map(square)
 
-console.log(result
-    )
+console.log(result)
 
 let isEven = (a:number)=>{
     if((a%2)==0){

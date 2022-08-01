@@ -10,9 +10,9 @@ import fetch from "node-fetch";
 
 async function getData(){
         try{
-            let response = await fetch('https://www.nseindia.com/api/option-chain-indices?symbol=NIFTY')
-
-            return response
+            let response = await fetch('https://reqres.in/api/users')
+            let data = await response.json()
+            return data
         }
         catch(err){
             console.log("this is from catch")

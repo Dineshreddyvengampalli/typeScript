@@ -23,4 +23,4 @@ export class calculator{
 
 const calc = new calculator()
 let addRes:number = calc.add(10,10,10)
-//console.log(addRes)
+console.log(addRes)

@@ -15,3 +15,4 @@ let result2 = array.filter((value)=>{
 })
 
 console.log(result2)
+
