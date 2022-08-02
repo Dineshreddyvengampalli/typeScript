@@ -1,7 +1,5 @@
 // 4.Get All users's ids who are using same 'apiKey'
 
-const { some } = require('async');
-const { count, Console } = require('console');
 var jsonData = require('./sample.json');
 
 
@@ -29,7 +27,7 @@ let repeatedKeysFilter = repeatedKeys.filter((value,index,self)=>{
 // })
 
 
-let usersWithSameIds = repeatedKeys.map((value,index)=>{
+let usersWithSameIds = repeatedKeysFilter.map((value,index)=>{
     let fake = jsonData.filter((data)=>{
         return data.apiKey === value
     })
@@ -47,11 +45,11 @@ let idsWithSameKeys = reduceUsers.map((data)=>{
     
 })
 
-let finalAns = idsWithSameKeys.filter((value,index,self)=>{
-    return self.indexOf(value) === index
-})
+// let finalAns = idsWithSameKeys.filter((value,index,self)=>{
+//     return self.indexOf(value) === index
+// })
 
 // console.log(repeatedKeysFilter)
 // console.log(usersWithSameIds)
 
-console.log(finalAns)
+console.log(idsWithSameKeys)
