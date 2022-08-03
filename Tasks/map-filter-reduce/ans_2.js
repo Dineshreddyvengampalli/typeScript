@@ -1,7 +1,5 @@
 // 2.Get all users with date of birth before 1990.
 
-
-const { count, Console } = require('console');
 var jsonData = require('./sample.json');
 
 let result = jsonData.filter((single_profile)=>{

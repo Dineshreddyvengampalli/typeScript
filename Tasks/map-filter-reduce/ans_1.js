@@ -1,8 +1,5 @@
 // 1.Get all unique users based on their email id.
 
-
-const { count, Console } = require('console');
-const { json } = require('stream/consumers');
 var jsonData = require('./sample.json');
 
 // let emails = jsonData.map((user,index)=>{
@@ -55,17 +52,75 @@ var jsonData = require('./sample.json');
 // console.log(reqData.length)
 
 
-let emails = jsonData.map((value,index)=>{
+//  let recentUsers = reduceUsers.map((value,index)=>{
+//     let users = reduceUsers.filter((data)=>{
+//         if ((data.updatedAt)> value.updatedAt){
+//             return data
+//         }
+//     })
+//     return users
+//  })
+
+// console.log(ans)
+
+let sampleData = jsonData
+
+let emails = sampleData.map((value,index)=>{
     return value.email
 })
 
-let repeatedEmails = jsonData.filter((value,index,self)=>{
+let repeatedEmails = emails.filter((value,index,self)=>{
     return (self.indexOf(value) !== index)
 })
 
-let uniqueUsers = jsonData.map((value,index)=>{
-    if((value.email==repeatedEmails)){
-    }
+let repeatEmailsFiltered = repeatedEmails.filter((value,index,self)=>{
+    return (self.indexOf(value) === index)
 })
 
-console.log(repeatedEmails)
+let repeatedUsers = repeatEmailsFiltered.map((value,index)=>{
+    let user = sampleData.filter((data)=>{
+        return data.email === value
+    })
+    return user
+})
+
+let reduceUsers = repeatedUsers.reduce((a,b)=>{
+    return a.concat(b)
+      
+},[])
+
+let recentData = []
+
+for(let i=0;i<reduceUsers.length;i++){
+    for(j=i+1;j<reduceUsers.length;j++){
+        if(reduceUsers[i].email == reduceUsers[j].email){
+            if(reduceUsers[i].updatedAt>reduceUsers[j].updatedAt){
+                recentData.push(reduceUsers[i])
+            }
+            else{
+                recentData.push(reduceUsers[j])
+            }
+        }
+    }
+}
+
+let deleteIds = recentData.map((data)=>{
+    return data.id
+})
+
+for(let i=0;i<sampleData.length;i++){
+    for(j=0;j<deleteIds.length;j++){
+       if((sampleData[i].id) == deleteIds[j]){
+        delete sampleData[i]
+       }
+    }
+}
+
+
+
+// let recentData = reduceUsers.map((value,index)=>{
+//     let ans = {}
+//     ans[index] = {value}
+//     return ans
+// })
+console.log(sampleData)
