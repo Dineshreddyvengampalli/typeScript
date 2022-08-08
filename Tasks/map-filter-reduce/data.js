@@ -1,0 +1,50 @@
+let answer1 = [
+    {
+      "id": "62e139a598f7d440f71bda60",
+      "email": "roy_rich@omatom.market",
+      "username": "roy89",
+      "profile": {
+        "name": "Roy Rich",
+        "company": "Omatom",
+        "dob": "1989-01-07",
+        "address": "73 Rutland Road, Sandston, Rhode Island",
+        "location": {
+          "lat": 18.660644,
+          "long": -100.307389
+        },
+        "about": "Fugiat veniam deserunt non pariatur reprehenderit dolore tempor est. Eu irure consequat nostrud dolor officia ex reprehenderit veniam aliquip."
+      },
+      "apiKey": "46e408c3-8e69-45b1-a54d-ffa37ca74c64",
+      "roles": [
+        "owner",
+        "member"
+      ],
+      "createdAt": "2013-02-06T12:22:53.696Z",
+      "updatedAt": "2013-02-07T12:22:53.696Z"
+    },
+    {
+      "id": "62e139a56baa24b651091dcb",
+      "email": "gertrude_matthews@tellifly.run",
+      "username": "gertrude93",
+      "profile": {
+        "name": "Gertrude Matthews",
+        "company": "Tellifly",
+        "dob": "1993-09-08",
+        "address": "95 Channel Avenue, Winston, Georgia",
+        "location": {
+          "lat": 17.347722,
+          "long": -56.602922
+        },
+        "about": "Minim aute dolore amet qui adipisicing aliquip tempor dolore quis nulla ex. Consequat proident incididunt ex qui exercitation eiusmod sunt ex."
+      },
+      "apiKey": "f174faa1-cf73-4cc7-a4c7-239677f901f6",
+      "roles": [
+        "guest",
+        "member"
+      ],
+      "createdAt": "2012-05-27T22:16:10.326Z",
+      "updatedAt": "2012-05-28T22:16:10.326Z"
+    }
+]
+
+module.exports = answer1

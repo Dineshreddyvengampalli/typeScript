@@ -110,4 +110,4 @@ var solutions = {
     }
 }
 
-module.exports = solutions
+module.exports = solutions 

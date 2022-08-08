@@ -1,12 +1,10 @@
 let solutions = require('./answers')
+let fun1Ans = require('./data')
 
 test('users with dob less than 1990',()=>{
-    let solution = solutions.getUserBydob()
-    let dob = []
-    for(let i of solution){
-        dob.push(i.profile.dob.slice(0,3))
-    }
-    for(let i of dob){
-        expect(i).toBeLessThan(1990)
-    }
+    let ans = fun1Ans.fun1Ans
+    let mockFun = jest.fn(()=>{
+        return {data : ans}
+    })
+    expect(mockFun()).toEqual(ans)
 })

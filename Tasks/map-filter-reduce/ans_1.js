@@ -111,7 +111,9 @@ let deleteIds = recentData.map((data)=>{
 for(let i=0;i<sampleData.length;i++){
     for(j=0;j<deleteIds.length;j++){
        if((sampleData[i].id) == deleteIds[j]){
-        delete sampleData[i]
+        data = sampleData.splice(i,1)
+
+    
        }
     }
 }
@@ -123,4 +125,7 @@ for(let i=0;i<sampleData.length;i++){
 //     ans[index] = {value}
 //     return ans
 // })
-console.log(sampleData)
+console.log(sampleData.length)
+console.log(jsonData.length)
+console.log(data)
+console.log(recentData)
