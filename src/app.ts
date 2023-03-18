@@ -59,3 +59,11 @@ const addNum = (...numbers:number[]):number=>{
 
 let res = addNum(1,2,3,4)
 console.log(res)
+
+// array de-structuring
+
+let array:number[] = [1,2,3,4]
+let [deArr,deArr2] = array
+
+console.log(deArr)
+console.log(deArr2)
