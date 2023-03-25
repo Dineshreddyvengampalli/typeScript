@@ -67,3 +67,4 @@ let [deArr,deArr2] = array
 
 console.log(deArr)
 console.log(deArr2)
+
