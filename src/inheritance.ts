@@ -9,7 +9,7 @@ class human {
 
 class people extends human{
     constructor(public name: string){
-        super(name)
+        super(name) // calls the base class constructor
     }
     getName = ()=>{
         console.log('this is modified method')
